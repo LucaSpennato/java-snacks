@@ -9,7 +9,6 @@ public class Snack8 {
 		Random rnd = new Random(128);
 		
 		int[] arr = new int[10];
-		int[] arr2 = new int[10];
 		
 		int sum = 0;
 		int biggestInt = 0;
@@ -22,11 +21,9 @@ public class Snack8 {
 			if(arr[i] % 5 == 0 ) {
 				sum += arr[i];				
 			}
-			
 			if(Math.abs(arr[i]) > Math.abs(biggestInt)) {
 				biggestInt = arr[i];
-			}
-			if(Math.abs(arr[i]) < Math.abs(smallestInt)) {
+			}else if(Math.abs(arr[i]) < Math.abs(smallestInt)) {
 				smallestInt = arr[i];
 			}
 			

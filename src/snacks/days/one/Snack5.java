@@ -15,8 +15,7 @@ public class Snack5 {
 			
 			if(arr[i] < smallerInt) {
 				smallerInt = arr[i];
-			}
-			if(arr[i] > biggerInt) {
+			}else if(arr[i] > biggerInt) {
 				biggerInt = arr[i];
 			}
 			

@@ -32,7 +32,6 @@ public class Snack7 {
 			if(words[i].length() < smallestWord.length()) {
 			
 				smallestWord = words[i];
-				
 			}
 			
 		}

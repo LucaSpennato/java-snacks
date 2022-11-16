@@ -25,14 +25,12 @@ public class Snack6 {
 			
 			if(arr1[i] < arr1Min) {
 				arr1Min = arr1[i];
-			}
-			if(arr1[i] > arr1Max) {
+			}else if(arr1[i] > arr1Max) {
 				arr1Max = arr1[i];
 			}
 			if(arr2[i] < arr2Min ) {
 				arr2Min = arr2[i];
-			}
-			if(arr2[i] > arr2Max){
+			}else if(arr2[i] > arr2Max){
 				arr2Max = arr2[i];
 			}
 			

@@ -19,7 +19,7 @@ public class snack4 {
 			int rndValue = rnd.nextInt(20);
 			
 			System.out.println(rndValue);
-			
+		
 		}
 	}
 
