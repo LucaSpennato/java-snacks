@@ -11,11 +11,11 @@ public class Snack6 {
 		
 		int sum = 0;
 		
-		int arr1Min = 100;
-		int arr2Min = 100;
+		int arr1Min = Integer.MAX_VALUE;
+		int arr2Min = Integer.MAX_VALUE;
 		
-		int arr1Max = 0;
-		int arr2Max = 0;
+		int arr1Max = Integer.MIN_VALUE;
+		int arr2Max = Integer.MIN_VALUE;
 		
 		for (int i = 0; i < arr1.length; i++) {
 			

@@ -6,8 +6,9 @@ public class Snack5 {
 		
 		int[] arr = { 70, 39, 18, 30, 51, 59, 1, 47, 67, 87 };
 		
-		int smallerInt = 100;
-		int biggerInt = 0;
+		// permette di avere il valore massimo dell'int
+		int smallerInt = Integer.MAX_VALUE;
+		int biggerInt = Integer.MIN_VALUE;
 		
 		int sum = 0;
 		

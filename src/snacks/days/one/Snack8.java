@@ -11,8 +11,8 @@ public class Snack8 {
 		int[] arr = new int[10];
 		
 		int sum = 0;
-		int biggestInt = 0;
-		int smallestInt = 100;
+		int biggestInt = Integer.MIN_VALUE;
+		int smallestInt = Integer.MAX_VALUE;
 		
 		for (int i = 0; i < arr.length; i++) {
 			
