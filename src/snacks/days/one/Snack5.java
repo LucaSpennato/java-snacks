@@ -6,7 +6,7 @@ public class Snack5 {
 		
 		int[] arr = { 70, 39, 18, 30, 51, 59, 1, 47, 67, 87 };
 		
-		int smallerInt = 1;
+		int smallerInt = 100;
 		int biggerInt = 0;
 		
 		int sum = 0;
