@@ -1,12 +1,12 @@
 package snacks.days.one;
 
-import java.util.Scanner;
+import java.util.Random;
 
 public class Snack2 {
 	
 	public static void main(String[] args) {
 		
-		String[] guests = {
+		String[] guestsName = {
 				"gianni",
 				"gino",
 				"antonello",
@@ -14,17 +14,24 @@ public class Snack2 {
 				"rolando"
 		};
 		
-		Scanner sc = new Scanner(System.in);
+		String[] guestsSurname = {
+				"rossi",
+				"alberti",
+				"verdone",
+				"rosetti",
+				"bertelli"
+				
+		};
 		
-		System.out.print("Verifica la tua presenza in lista: ");
-		String searchYourName = sc.nextLine();
-		sc.close();
+		Random rnd = new Random();
 		
-		for (int i = 0; i < guests.length; i++) {
-			if(guests[i].equals(searchYourName.toLowerCase())) {
-				System.out.println("Il tuo nome è presente!");
-				break;
-			}
+		System.out.println("La lista degli invitati: ");
+		for (int i = 0; i < guestsName.length; i++) {
+			
+			int randomName = rnd.nextInt(guestsName.length);
+			int randomSurname = rnd.nextInt(guestsSurname.length);
+			
+			System.out.println(guestsName[randomName] + " " + guestsSurname[randomSurname]);
 		}
 		
 	}
