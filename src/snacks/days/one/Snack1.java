@@ -10,11 +10,13 @@ public class Snack1 {
 		
 		int catchNumber = sc.nextInt();
 		
-		if(catchNumber %2 == 0) {
-			System.out.println("Even!: " + catchNumber);
-		}else {
-			System.out.println("Let's fix that: " + (catchNumber + 1));
-		}
+//		if(catchNumber %2 == 0) {
+//			System.out.println("Even!: " + catchNumber);
+//		}else {
+//			System.out.println("Let's fix that: " + (catchNumber + 1));
+//		};
+		
+		System.out.println(catchNumber %2 == 0 ? "Even!: " + catchNumber : "Let's fix that: " + (catchNumber + 1));
 		
 	}
 	
