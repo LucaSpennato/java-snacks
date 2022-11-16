@@ -14,7 +14,6 @@ public class snack4 {
 		
 		int arrayDiff = array2.length - array1.length;
 		
-		
 		for (int i = 0; i < arrayDiff; i++) {
 			
 			int rndValue = rnd.nextInt(20);
