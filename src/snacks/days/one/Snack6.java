@@ -1,5 +1,7 @@
 package snacks.days.one;
 
+import java.util.Arrays;
+
 public class Snack6 {
 
 	public static void main(String[] args) {
@@ -34,8 +36,9 @@ public class Snack6 {
 				arr2Max = arr2[i];
 			}
 			
-			System.out.println(sumArr[i]);
 		}
+		
+		System.out.println(Arrays.toString(sumArr));
 		
 		float avg = (float) sum / ((float) arr1.length + (float) arr2.length);
 		
