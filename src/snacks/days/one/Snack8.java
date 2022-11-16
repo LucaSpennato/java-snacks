@@ -12,6 +12,8 @@ public class Snack8 {
 		int[] arr2 = new int[10];
 		
 		int sum = 0;
+		int biggestInt = 0;
+		int smallestInt = 100;
 		
 		for (int i = 0; i < arr.length; i++) {
 			
@@ -21,36 +23,19 @@ public class Snack8 {
 				sum += arr[i];				
 			}
 			
-			
+			if(Math.abs(arr[i]) > Math.abs(biggestInt)) {
+				biggestInt = arr[i];
+			}
+			if(Math.abs(arr[i]) < Math.abs(smallestInt)) {
+				smallestInt = arr[i];
+			}
 			
 		}
 
-		System.out.println(big + "test");
+		System.out.println("Biggest int: " + biggestInt + " - SmallestInt: " + smallestInt);
 		
 		System.out.println("Sum: " + sum);
 		
-		
-		int biggerInt = 0;
-		int smallestInt = 100;
-		
-		for (int i = 0; i < arr2.length; i++) {
-			
-			if(arr[i] < 0) {
-				arr2[i] = arr[i] * - 1;
-			}else{
-				arr2[i] = arr[i]; 				
-			}
-			
-			if(arr2[i] > biggerInt) {
-				biggerInt = arr2[i];
-			}
-			if(arr2[i] < smallestInt) {
-				smallestInt = arr2[i];
-			}
-
-		}
-		
-		System.out.println("Bigger int: " + biggerInt + " - Smalltest int: " + smallestInt);
 	
 	}
 	
