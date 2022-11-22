@@ -17,6 +17,8 @@ public class Main {
 		int maxYearIncome = Integer.MIN_VALUE;
 		int minYearIncome = Integer.MAX_VALUE;
 		
+		int totalCorporatePaychecks = 0;
+		
 		Person maxIncomePerson = null;
 		Person minIncomePerson = null;
 		
@@ -34,7 +36,12 @@ public class Main {
 				minIncomePerson = personValue;
 			}
 			
+			totalCorporatePaychecks += personYearIncomeValue;
+			
 		}
+		
+		int corporateAvgPaycheck = totalCorporatePaychecks / people.length;
+		
 		System.out.println("Highest income: " + maxYearIncome + "$");
 		System.out.println("Person with the highest income: \n" + maxIncomePerson);
 		
@@ -42,6 +49,11 @@ public class Main {
 		
 		System.out.println("Lowest income: " + minYearIncome + "$");
 		System.out.println("Person with the lowest income: \n" + minIncomePerson);
+		
+		System.out.println("-------------------------------------------------------");
+		
+		System.out.println("Total corporate paychecks: " + totalCorporatePaychecks + "$");
+		System.out.println("Average corporate paychecks: " + corporateAvgPaycheck + "$");
 	}
 	
 }
