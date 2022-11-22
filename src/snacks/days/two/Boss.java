@@ -31,7 +31,7 @@ public class Boss extends Person {
 	@Override
 	public int getYearIncome() {
 		
-		return getBonus() + (getSalary() * 14);
+		return getBonus() + (getSalary() * 12);
 	}
 	
 	@Override
