@@ -8,6 +8,11 @@ public class Main {
 		
 		System.out.println(e);
 		
+		System.out.println("---------------------------------------");
+		
+		Boss b = new Boss("Vitantonio", "Antonucci", 3000, 5000);
+		
+		System.out.println(b);
 	}
 	
 }
