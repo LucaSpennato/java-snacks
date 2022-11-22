@@ -52,5 +52,16 @@ public abstract class Person {
 		return corporateCode;
 	}
 	
+	public String getFullName() {
+		return getName() + " " + getSurname() + " (code: " + getCorporateCode() + ")";
+	}
 	
+	public abstract int getYearIncome();
+	
+	@Override
+	public String toString() {
+
+		return "\nFull name: " + getFullName()
+				+ "\nDate of birth: " + getDateOfBirth();
+	}
 }
