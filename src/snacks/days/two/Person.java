@@ -10,11 +10,11 @@ public abstract class Person {
 	private LocalDate dateOfBirth;
 	private String corporateCode;
 	
-	public Person(String name, String surname, LocalDate dateOfBirth) {
+	public Person(String name, String surname) {
 		
 		setName(name);
 		setSurname(surname);
-		setDateOfBirth(dateOfBirth);
+		setDateOfBirth();
 		setCorporateCode();
 		
 	}
@@ -44,8 +44,8 @@ public abstract class Person {
 		return dateOfBirth;
 	}
 
-	private void setDateOfBirth(LocalDate dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
+	private void setDateOfBirth() {
+		this.dateOfBirth = LocalDate.now();
 	}
 
 	public String getCorporateCode() {
@@ -62,6 +62,7 @@ public abstract class Person {
 	public String toString() {
 
 		return "\nFull name: " + getFullName()
-				+ "\nDate of birth: " + getDateOfBirth();
+				+ "\nDate of birth: " + getDateOfBirth()
+				+ "\nYear income: " + getYearIncome() + "$";
 	}
 }
