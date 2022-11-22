@@ -15,22 +15,33 @@ public class Main {
 		Person[] people = { emp1, emp2, emp3, boss1, boss2 };
 		
 		int maxYearIncome = Integer.MIN_VALUE;
+		int minYearIncome = Integer.MAX_VALUE;
 		
 		Person maxIncomePerson = null;
+		Person minIncomePerson = null;
 		
 		for (int i = 0; i < people.length; i++) {
 			
-			int personYearIncomeValue = people[i].getYearIncome(); 
+			Person personValue = people[i];
+			int personYearIncomeValue = personValue.getYearIncome(); 
 			
 			if(personYearIncomeValue > maxYearIncome) {
 				maxYearIncome = personYearIncomeValue;
-				maxIncomePerson = people[i];
-				
+				maxIncomePerson = personValue;
+			}
+			if(personYearIncomeValue < minYearIncome) {
+				minYearIncome = personYearIncomeValue;
+				minIncomePerson = personValue;
 			}
 			
 		}
-		System.out.println("Highest income: " + maxYearIncome);
+		System.out.println("Highest income: " + maxYearIncome + "$");
 		System.out.println("Person with the highest income: \n" + maxIncomePerson);
+		
+		System.out.println("-------------------------------------------------------");
+		
+		System.out.println("Lowest income: " + minYearIncome + "$");
+		System.out.println("Person with the lowest income: \n" + minIncomePerson);
 	}
 	
 }
