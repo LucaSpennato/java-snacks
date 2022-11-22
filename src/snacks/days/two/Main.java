@@ -6,13 +6,13 @@ public class Main {
 		
 		Employee emp1 = new Employee("Ginani", "Sangiorgi", 1600, 12);
 		Employee emp2 = new Employee("Robberto", "Andacci", 1300, 12);
-		Employee emp3 = new Employee("Gianfranco", "Esposito", 1700, 14);
+		Employee emp3 = new Employee("Gianfranco", "Esposito", 1700, 12);
 		
 		Boss boss1 = new Boss("Vitantonio", "Antonucci", 3000, 5000);
 		Boss boss2 = new Boss("Robberta", "Giannoni", 3200, 6000);
 		
-		
 		Person[] people = { emp1, emp2, emp3, boss1, boss2 };
+		
 		
 		int maxYearIncome = Integer.MIN_VALUE;
 		int minYearIncome = Integer.MAX_VALUE;
@@ -21,6 +21,14 @@ public class Main {
 		
 		Person maxIncomePerson = null;
 		Person minIncomePerson = null;
+		
+		// Bonus
+		int maxYearIncomeEmployee = Integer.MIN_VALUE;
+	
+		int maxYearIncomeBoss = Integer.MIN_VALUE;
+		
+		Employee maxIncomeEmployee = null;
+		Boss maxIncomeBoss = null;
 		
 		for (int i = 0; i < people.length; i++) {
 			
@@ -38,6 +46,24 @@ public class Main {
 			
 			totalCorporatePaychecks += personYearIncomeValue;
 			
+			//Bonus Employee
+			
+			if(personValue.getClass().equals(Employee.class)) {
+				
+				if(personYearIncomeValue > maxYearIncomeEmployee) {
+					maxYearIncomeEmployee = personYearIncomeValue;
+					maxIncomeEmployee = (Employee) personValue;
+				}
+			}
+			
+			if(personValue.getClass().equals(Boss.class)) {
+				
+				if(personYearIncomeValue > maxYearIncomeBoss) {
+					maxYearIncomeBoss = personYearIncomeValue;
+					maxIncomeBoss = (Boss) personValue;
+				}
+			}
+		
 		}
 		
 		int corporateAvgPaycheck = totalCorporatePaychecks / people.length;
@@ -54,6 +80,16 @@ public class Main {
 		
 		System.out.println("Total corporate paychecks: " + totalCorporatePaychecks + "$");
 		System.out.println("Average corporate paychecks: " + corporateAvgPaycheck + "$");
+		
+		System.out.println("-------------------------------------------------------");
+		
+		System.out.println("Employee highest income: " + maxYearIncomeEmployee + "$");
+		System.out.println("Employee with highest income: \n" + maxIncomeEmployee);
+		
+		System.out.println("-------------------------------------------------------");
+		
+		System.out.println("Boss highest income: " + maxYearIncomeBoss + "$");
+		System.out.println("Boss with highest income: \n" + maxIncomeBoss);
 	}
 	
 }
